@@ -10,7 +10,7 @@ submitted to *Progress in Nuclear Energy* (under review).
 The repository is intended to provide a reproducible reference case for CFD simulations of gas bubbles in liquid metals.
 
 ## Case overview
-- **System:** N<sub>2 bubble in liquid Hg
+- **System:** N₂ bubble in liquid Hg
 - **Application:** Experimental validation case
 - **Solver:** `interIsoFoam`
 - **Method:** Geometric Volume-of-Fluid (VOF)
