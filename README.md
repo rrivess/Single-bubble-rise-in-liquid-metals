@@ -1,7 +1,7 @@
 # Single N₂ Bubble Rise in Liquid Mercury (N₂/Hg) – OpenFOAM Case
 
 ## Description
-This repository contains an OpenFOAM case for the simulation of a **single nitrogen bubble rising in stagnant liquid mercury (N<sub>2/Hg)**. This case corresponds to one of the validation cases used in the manuscript:
+This repository contains an OpenFOAM case for the simulation of a **single nitrogen bubble rising in stagnant liquid mercury (N₂/Hg)**. This case corresponds to one of the validation cases used in the manuscript:
 
 **Single-Bubble Rise in Liquid Metals: CFD Modeling, Validation and Correlation Assessment**
 
