@@ -62,7 +62,7 @@ The repository is distributed in a clean state; the mesh and solution files are 
 ## Associated manuscript
 
 Rives, R., Al-Awad, A. S., and Batet, L.
-Single-Bubble Rise in Liquid Metals: CFD Modeling, Validation and Correlation Assessment
+"Single-Bubble Rise in Liquid Metals: CFD Modeling, Validation and Correlation Assessment".
 Submitted to Progress in Nuclear Energy (under review).
 
 ## License
