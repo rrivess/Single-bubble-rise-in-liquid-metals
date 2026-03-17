@@ -72,4 +72,4 @@ This repository is distributed under the BSD 3-Clause License. See the LICENSE f
 ## Contact
 
 Ronny Rives (ronny.rives@upc.edu).
-Universitat Politècnica de Catalunya–BarcelonaTech (UPC)
+Universitat Politècnica de Catalunya–BarcelonaTech (UPC).
