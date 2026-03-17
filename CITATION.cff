@@ -4,7 +4,7 @@ message: "If you use this repository, please cite it as follows."
 authors:
   - family-names: "Rives"
     given-names: "Ronny"
-repository-code: "https://github.com/rrivess/REPOSITORY"
+repository-code: "https://github.com/rrivess/Single-bubble-rise-in-liquid-metals"
 license: "BSD-3-Clause"
 abstract: "OpenFOAM v2012 validation case for single nitrogen bubble rise in liquid mercury (N2/Hg), associated with the manuscript submitted to Progress in Nuclear Energy."
 keywords:
