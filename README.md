@@ -45,7 +45,7 @@ From the case directory, execute:
 ./Allclean
 ./Allrun
 
-Notes
+## Notes
 
 This case was developed and tested with OpenFOAM v2012. Reproducibility with other versions is not guaranteed.
 
