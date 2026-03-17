@@ -44,28 +44,3 @@ From the case directory, execute:
 ```bash
 ./Allclean
 ./Allrun
-
-## Notes
-
-This case was developed and tested with OpenFOAM v2012. Reproducibility with other versions is not guaranteed.
-
-Before running the case, verify that all required libraries, environment variables, and paths are correctly configured.
-
-The results may depend on the correct installation of the adaptive mesh refinement library.
-
-This repository provides a representative validation case from the manuscript, not the full set of simulations.
-
-Associated manuscript
-
-Rives, R., Al-Awad, A. S., and Batet, L.
-Single-Bubble Rise in Liquid Metals: CFD Modeling, Validation and Correlation Assessment
-Submitted to Progress in Nuclear Energy (under review).
-
-License
-
-This repository is distributed under the BSD 3-Clause License. See the LICENSE file for details.
-
-Contact
-
-Ronny Rives
-Universitat Politècnica de Catalunya–BarcelonaTech (UPC)
