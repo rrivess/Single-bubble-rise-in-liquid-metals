@@ -1,7 +1,7 @@
-# Single N2 Bubble Rise in Liquid Mercury (N2/Hg) – OpenFOAM Case
+# Single N_2 Bubble Rise in Liquid Mercury (N_2/Hg) – OpenFOAM Case
 
 ## Description
-This repository contains an OpenFOAM case for the simulation of a **single nitrogen bubble rising in stagnant liquid mercury (N2/Hg)**. This case corresponds to one of the validation cases used in the manuscript:
+This repository contains an OpenFOAM case for the simulation of a **single nitrogen bubble rising in stagnant liquid mercury (N_2/Hg)**. This case corresponds to one of the validation cases used in the manuscript:
 
 **Single-Bubble Rise in Liquid Metals: CFD Modeling, Validation and Correlation Assessment**
 
@@ -10,7 +10,7 @@ submitted to *Progress in Nuclear Energy* (under review).
 The repository is intended to provide a reproducible reference case for CFD simulations of gas bubbles in liquid metals.
 
 ## Case overview
-- **System:** N2 bubble in liquid Hg
+- **System:** N_2 bubble in liquid Hg
 - **Application:** Experimental validation case
 - **Solver:** `interIsoFoam`
 - **Method:** Geometric Volume-of-Fluid (VOF)
