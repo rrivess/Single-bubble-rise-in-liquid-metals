@@ -1,0 +1,47 @@
+/*--------------------------------*- C++ -*----------------------------------*\ 
+ | =========                 |                                                 |
+ | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+ |  \\    /   O peration     | Version:  6                                     |
+ |   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+ |    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/ 
+FoamFile 
+ { 
+ 	 version     2.0; 
+ 	 format      ascii; 
+ 	 class       dictionary; 
+ 	 location    "constant"; 
+ 	 object      transportProperties; 
+ }
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+phases (water air); 
+
+water
+ { 
+ 	 transportModel  Newtonian; 
+ 	 nu              nu [ 0 2 -1 0 0 0 0 ] 1.1516e-07; 
+ 	 rho             rho [ 1 -3 0 0 0 0 0 ] 13545.850; 
+	 D               D [ 0 2 -1 0 0 0 0 ] 4.80e-09;  // m^2/s need to be updated
+ }
+
+air 
+ {
+ 	 transportModel  Newtonian; 
+ 	 nu              nu [ 0 2 -1 0 0 0 0 ] 1.5087e-05; 
+ 	 rho             rho [ 1 -3 0 0 0 0 0 ] 1.1648;
+	 D               D [ 0 2 -1 0 0 0 0 ] 1e-05;    // m^2/s need to be updated
+ }
+
+molarmass         molarmass [ 1 0 0 0 -1 0 0 ] 0.0280134; 
+
+sigma             sigma [1 0 -2 0 0 0 0] 0.485;
+
+Hei               Hei [0 0 0 0 0 0 0] 1e-4;
+
+DPsi              DPsi [0 2 0 0 0 0 0] 1e-6;
+
+
+k_gas             k_gas [ -1 -3 3 0 0 2 0 ] 1.0e-15; // S/m need to be updated
+k_liquid          k_liquid [ -1 -3 3 0 0 2 0 ] 1.044e+06; // S/m need to be updated
+
+mu                mu [1 1 -2 0 0 -2 0] 1.257e-6; // N/A^-2

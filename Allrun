@@ -1,0 +1,53 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Source tutorial run functions
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+# Get application name
+application=$(getApplication)
+
+# Skipped if polyMesh exists
+#============================
+if [ -d constant/polyMesh ]; then
+  echo "Directory constant/polyMesh exists !! Not overwritten !!"
+else
+  runApplication blockMesh
+  runApplication checkMesh
+fi
+
+# Run preparatory steps for simulation
+#======================================
+if [ -d 0 ]; then
+  echo "Directory 0 exists !! Not overwritten !!"
+else
+  restore0Dir
+  runApplication setAlphaField
+fi
+
+if [ `getNumberOfProcessors` -gt 1 ]; then
+  runApplication decomposePar -force
+fi
+
+runParallel $(getApplication)
+runApplication redistributePar -reconstruct
+
+foamLog log.interIsoFoam
+cat log.interIsoFoam | grep "bubble volume     =" | awk '{ print $NF }' > bubble_volume.dat
+cat log.interIsoFoam | grep "bubble area       =" | awk '{ print $NF }' > bubble_area.dat
+cat log.interIsoFoam | grep "bubble centroid   =" | awk '{ print $4 }' | tr -d '(' > bubble_centroid_x.dat
+cat log.interIsoFoam | grep "bubble centroid   =" | awk '{ print $5 }' > bubble_centroid_y.dat
+cat log.interIsoFoam | grep "bubble centroid   =" | awk '{ print $6 }' | tr -d ')' > bubble_centroid_z.dat
+cat log.interIsoFoam | grep "bubble velocity   =" | awk '{ print $4 }' | tr -d '(' > bubble_Vx.dat
+cat log.interIsoFoam | grep "bubble velocity   =" | awk '{ print $5 }' > bubble_Vy.dat
+cat log.interIsoFoam | grep "bubble velocity   =" | awk '{ print $6 }' | tr -d ')' > bubble_Vz.dat
+cat log.interIsoFoam | grep "bubble diameter A =" | awk '{ print $NF }' > bubble_diam_a.dat
+cat log.interIsoFoam | grep "bubble diameter B =" | awk '{ print $NF }' > bubble_diam_b.dat
+cat log.interIsoFoam | grep "bubble sphericity =" | awk '{ print $NF }' > bubble_sphericity.dat
+mv *.dat log.* logs/
+
+rm -rf processor* 
+
+touch simulation.foam
+
+#------------------------------------------------------------------------------
